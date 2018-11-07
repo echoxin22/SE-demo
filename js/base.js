@@ -1844,3 +1844,118 @@ $('#mineusL').on('click', function () {
         $(this).siblings('input:last').remove();
     }
 })
+
+
+
+
+// 地图label内容闪烁.
+
+$(document).ready(function(){
+
+    var typesConMaps = [
+        {
+            status: 'normal',
+            statusText: '正常',
+            companyName: '深圳市金谷园技术发展有限公司',
+            createDate: '2010-12-12',
+            nsrsbh: '440301002418101'
+        },
+        {
+            status: 'loss',
+            statusText: '失联',
+            companyName: '深圳市腾讯科技有限公司',
+            createDate: '2008-06-17',
+            nsrsbh: '44033100DK0031X'
+        },
+        {
+            status: 'out',
+            statusText: '停运',
+            companyName: '深圳天然气有限公司',
+            createDate: '2014-12-11',
+            nsrsbh: '44033100DK00125'
+        },
+        {
+            status: 'logout',
+            statusText: '注销',
+            companyName: '中国石化（深圳）有限公司',
+            createDate: '2011-11-11',
+            nsrsbh: '440301192408392'
+        },
+        {
+            status: 'normal',
+            statusText: '正常',
+            companyName: '深圳市青鸟科技有限公司',
+            createDate: '1996-01-18',
+            nsrsbh: '4403011924083XY'
+        },
+        {
+            status: 'normal',
+            statusText: '正常',
+            companyName: '中兴通信技术深圳有限公司',
+            createDate: '1997-10-28',
+            nsrsbh: '4403011924083XY'
+        }
+    ];
+    // var taxConMaps = [
+    //     {
+    //         se: 1987231,
+    //         swjg: '深圳市福田区国家税务局税源管理一科'
+    //     },
+    //     {
+    //         se: 227561,
+    //         swjg: '深圳市福田区国家税务局税源管理二科'
+    //     },
+    //     {
+    //         se: 220198.92,
+    //         swjg: '深圳市福田区国家税务局税源管理三科'
+    //     },
+    //     {
+    //         se: 5645646,
+    //         swjg: '深圳市福田区国家税务局税源管理四科'
+    //     },
+    //     {
+    //         se: 165431,
+    //         swjg: '深圳市福田区国家税务局税源管理五科'
+    //     }
+    // ];
+    var typesCon = ``;
+
+    var arrayRotateOne = function(arr, reverse){
+        if(reverse)
+          arr.unshift(arr.pop())
+        else
+          arr.push(arr.shift())
+        return arr
+    };
+    var randomTime = function(tMin, tMax) {
+        return Math.floor((tMin + (tMax-tMin)*Math.random())*1000);
+    };
+
+    var executionTypesCon = function() {
+        var contentAlias = function() {
+            typesConMaps.slice(0, 5).forEach(function(tc) {
+                typesCon += `<tr>`;
+                typesCon += `<td><span class="cm-status ${tc.status}">${tc.statusText}</span>${tc.companyName}</td>`;
+                typesCon += `<td>${tc.createDate}</td>`;
+                typesCon += `<td>${tc.nsrsbh}</td>`;
+                typesCon += `</tr>`;
+            });
+        };
+        contentAlias();
+        $('.chart-label.types >table>tbody').html(typesCon);
+        function shiftTable(){
+            typesConMaps = arrayRotateOne(typesConMaps, Math.random() >= 0.5);
+            typesCon = ``;
+            contentAlias();
+            $('.chart-label.types >table>tbody').html(typesCon);
+        }
+        (function loop() {
+            var rand = randomTime(0.5, 3);
+            setTimeout(function() {
+                shiftTable();
+                loop();  
+            }, rand);
+        }());
+    };
+    executionTypesCon();
+})

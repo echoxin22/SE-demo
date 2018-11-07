@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/rem.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <title>暴风眼 -首页</title>
 </head>
 
@@ -218,7 +219,7 @@
             </div>
             <div class="right-center">
                 <div class="title-box">
-                    <p id="switchBtn"><span class="active" data-dataType="income">收入数据</span><img class="line-img" src="images/line-blue.png" alt=""><span data-dataType="expend">支出数据</span></p>
+                    <p id="switchBtn"><span class="active" data-dataType="income">虚开总额</span><img class="line-img" src="images/line-blue.png" alt=""><span data-dataType="expend">纳税总额</span></p>
                     <img class="line-img" src="images/line-blue.png" alt="">
                     <button id="dateBtn"><img src="images/data_icon.png" alt="">日期</button>
                 </div>
@@ -237,13 +238,32 @@
                 </div>
             </div>
             <div class="right-bottom">
-                <div class="title-box">
-                    <button id="setBtn"><img src="images/settings_icon.png" alt="">设置</button>
-                </div>
                 <div class="data-box">
                     <div class="settings-box">
-                        <p><img src="images/teacher_icon.png" alt="">虚开公司列表<span id="name_a"></span><span id="date_a"></span></p>
-                        <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p>
+                        <!-- <p><img src="images/teacher_icon.png" alt="">虚开公司列表<span id="name_a"></span><span id="date_a"></span></p>
+                        <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
+                        <div class="title-box">
+                            <h6 id="barTitle">虚开高风险企业</h6>
+                            <img class="line-img" src="images/line-blue.png" alt="">
+                        </div>
+                        <div class="chart-label pull-left types">
+                                           
+                                            <table class="table table-bordered tile notek-label-table">
+                                                <thead>
+                                                    <th>企业名称</th>
+                                                    <th>成立时间</th>
+                                                    <th>纳税人识别号</th>
+                                                </thead>
+
+                                                <tbody>
+                                                   <!--  <tr>
+                                                        <td>441</td>
+                                                        <td>3306</td>
+                                                        <td>http-alt</td>
+                                                    </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
                     </div>
                 </div>
             </div>
@@ -553,11 +573,11 @@
                 $('.container').attr('style', 'visibility: visible').find('.pop-up').eq(3).attr('style', 'visibility: visible').siblings().attr('style', 'visibility: hidden');
                 $('.pop-data .ranking-box').hide();
                 if ($('#switchBtn').find('.active').data('datatype') == "income") {
-                    $('#titles').html('收入数据');
+                    $('#titles').html('虚开总额');
                     $('#totalProfits').html('123,456.5元');
                     $('.cont-div').eq(2).attr('style', 'visibility: visible').siblings('.cont-div').attr('style', 'visibility: hidden');
                 } else if ($('#switchBtn').find('.active').data('datatype') == 'expend') {
-                    $('#titles').html('支出数据');
+                    $('#titles').html('纳税总额');
                     $('#totalProfits').html('32,111.4元');
                     $('.cont-div').eq(2).attr('style', 'visibility: visible').siblings('div').attr('style', 'visibility: hidden');
                 }

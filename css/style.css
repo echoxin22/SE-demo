@@ -32,7 +32,7 @@ pre {
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    color: #333;
+    /*color: #333;*/
 }
 
 body {
@@ -839,17 +839,17 @@ pre {
 
 .data-box>.settings-box {
     box-sizing: border-box;
-    width: 4.9rem;
-    height: 2.38rem;
+   /* width: 4.9rem;
+    height: 2.38rem;*/
     position: absolute;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(14, 148, 234, 0.2);
-    border: 1px solid #0E94EA;
-    color: white;
+/*    background-color: rgba(14, 148, 234, 0.2);
+*//*    border: 1px solid #0E94EA;
+*/    color: white;
     font-size: 0.18rem;
     overflow: hidden;
 }
@@ -864,6 +864,12 @@ pre {
     font-size: 1.3vw;
     text-indent: 8px;
     background-color: rgba(62, 86, 86, 0.1);
+    height: 100%;
+}
+
+.chart-label td {
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 .chart-label.types {
@@ -873,9 +879,13 @@ pre {
     background-color: rgba(103, 145, 145, 0.1);
 }
 
-.notek-label-table, .notek-label-table th {
+.notek-label-table, .notek-label-table th, .notek-label-table tbody {
     color: #4bffff ;
     background-color: transparent !important;
+}
+
+.notek-label-table {
+    height: 100%;
 }
 
 
