@@ -1,0 +1,84 @@
+﻿/*引用字库*/
+@font-face { font-family:'electronicFont'; src: url("font/DS-DIGIT.TTF"); }
+
+
+/*旋转*/
+.logoline3{-webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration: 6000ms; }
+@-webkit-keyframes forotate{
+    from{
+        -webkit-transform:rotate(-360deg);
+        opacity: .9;
+       }
+    to{
+        -webkit-transform:rotate(0);
+        opacity: 1;
+        }
+}
+
+@-webkit-keyframes forotate1{
+    from{
+        -webkit-transform:rotate(0);
+    }
+    to{
+        -webkit-transform:rotate(-180deg);
+    }
+}
+
+
+.right-area { position: absolute; right: 20%; -webkit-animation:bounceInRight2 .8s .3s ease both;}
+
+
+
+.area-inbox-1 { width: 293px; height: 270px; background: url(../images/bg01rightarea.png) right bottom no-repeat;}
+.area-text p { width: 115px;}
+
+
+.area-inbox-1 dl { padding:90px 0 0 130px; font-size:12px;}
+.area-inbox-1 dl dt { color: rgba(255,255,255,.3); margin-top: 4px;}
+.area-inbox-1 dl dd { position: relative; }
+.area-inbox-1 dl dd.font12 { font-size: 12px;}
+.area-inbox-1 dl dd.font-red { color:#ff3114;}
+.area-inbox-1 dl dd.ml-20, .area-inbox-1 dl dt.ml-20 { margin-left: -18px;}
+.area-inbox-1 dl dd span {font-family:'electronicFont'; position:relative; z-index: 1; font-size: 22px; margin-top: 6px; letter-spacing:1px; opacity:1; }
+.area-inbox-1 dl dd b {-webkit-animation-iteration-count: infinite;  -webkit-animation-name:flash2 ; -webkit-animation-duration:3000ms;  position: absolute; left:-5px; top: 30%; display: block; width:74px; height:17px; background: url(../images/bg07rightarea.png) left bottom no-repeat;}
+.area-inbox-1 dl dd:nth-child(2) b {-webkit-animation-iteration-count: infinite;  -webkit-animation-name:flash2 ; -webkit-animation-duration:5000ms;}
+.area-inbox-1 dl dd:nth-child(3) b {-webkit-animation-iteration-count: infinite;  -webkit-animation-name:flash2 ; -webkit-animation-duration: 1000ms;}
+.area-inbox-1 div {color: #fff;}
+.round-1 { position: absolute; left: 94px; top: 98px; width: 168px; height: 168px; border-radius: 100%; border:1px dashed #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:19000ms;}
+.round-2 { position: absolute; left: 79px; top: 84px; width: 198px; height: 198px; border-radius: 100%; border:1px dashed rgba(255,255,255,0.5);  -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate1 ; -webkit-animation-duration:8000ms;}
+.round-3 { position: absolute; left: 50px; top: 68px; width: 40px; height: 40px; border:1px solid rgba(255,255,255,.8); text-align: center; line-height: 40px;font-family:'electronicFont'; font-size: 14px;  border-radius: 100%; background: url(../images/bg05rightarea.png) right bottom no-repeat;  -webkit-animation-iteration-count: infinite;  -webkit-animation-name: whitePulse; -webkit-animation-duration:2s;}
+.round-4 { position: absolute; left: 40px; top:102px; width: 23px; height: 23px; border-radius: 100%; background: url(../images/bg06rightarea.png) right bottom no-repeat; box-shadow: 0 0 12px #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:4000ms;}
+
+/*.area-inbox-2 { }
+.area-inbox-2 ul {margin-left:50px; margin-top:15px;}
+.area-inbox-2 li { position: relative; margin-top: 12px; width: 91px; padding-right: 10px; cursor: pointer; height: 24px; padding-top: 15px; text-align:right; background: url(../images/bg01big2index.png) right bottom no-repeat;font-family:'electronicFont'; font-size: 20px; color: #fff; }
+.area-inbox-2 li strong { position: absolute; left:3px; top:5px; color: #00ccff; font-size: 30px;}
+.area-inbox-2 li b { width: 60px; height: 5px; background: #5d5d5d;  display: block; position: absolute; right:3px; top:8px; }
+.area-inbox-2 li:hover b { background: #fff; -webkit-animation:flash .2s .2s ease both; -moz-animation:flash .2s .2s ease both;}
+.area-inbox-2 li em {width: 15px; height:14px; background: url(../images/bg02big2index.png) right bottom no-repeat; display: block; position: absolute; left:-4px; top:-4px;}
+
+.area-text { margin-top: 25px ; position: relative; width: 116px; padding: 14px;}
+.area-text h4 {}
+.area-text p { color: rgba(255,255,255,.6) }
+.area-text b { position: absolute; top: 0; display: block; width:8px; height: 140px; }
+.animation-line1 {  left:0; background: url(../images/bg01righttext.png) center top no-repeat;}
+.animation-line2 {  right:0;background: url(../images/bg02righttext.png) center top no-repeat;}
+
+*/
+
+
+@-webkit-keyframes whitePulse {
+    from {
+        box-shadow: 0 0 26px #fff,
+        0 0 4px #fff,
+        0 0 2px #fff,
+        0 0 0px #fff;
+
+    }
+    to {
+        box-shadow: 0 0 0 #fff,
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 26px #fff;
+    }
+}
