@@ -25,9 +25,6 @@
 }
 
 
-.right-area { position: absolute; right: 20%; -webkit-animation:bounceInRight2 .8s .3s ease both;}
-
-
 
 .area-inbox-1 { width: 293px; height: 270px; background: url(../images/bg01rightarea.png) right bottom no-repeat;}
 .area-text p { width: 115px;}
@@ -44,10 +41,10 @@
 .area-inbox-1 dl dd:nth-child(2) b {-webkit-animation-iteration-count: infinite;  -webkit-animation-name:flash2 ; -webkit-animation-duration:5000ms;}
 .area-inbox-1 dl dd:nth-child(3) b {-webkit-animation-iteration-count: infinite;  -webkit-animation-name:flash2 ; -webkit-animation-duration: 1000ms;}
 .area-inbox-1 div {color: #fff;}
-.round-1 { position: absolute; left: 94px; top: 98px; width: 168px; height: 168px; border-radius: 100%; border:1px dashed #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:19000ms;}
-.round-2 { position: absolute; left: 79px; top: 84px; width: 198px; height: 198px; border-radius: 100%; border:1px dashed rgba(255,255,255,0.5);  -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate1 ; -webkit-animation-duration:8000ms;}
-.round-3 { position: absolute; left: 50px; top: 68px; width: 40px; height: 40px; border:1px solid rgba(255,255,255,.8); text-align: center; line-height: 40px;font-family:'electronicFont'; font-size: 14px;  border-radius: 100%; background: url(../images/bg05rightarea.png) right bottom no-repeat;  -webkit-animation-iteration-count: infinite;  -webkit-animation-name: whitePulse; -webkit-animation-duration:2s;}
-.round-4 { position: absolute; left: 40px; top:102px; width: 23px; height: 23px; border-radius: 100%; background: url(../images/bg06rightarea.png) right bottom no-repeat; box-shadow: 0 0 12px #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:4000ms;}
+.round-1 { position: absolute; left: 94px; top: 72px; width: 168px; height: 168px; border-radius: 100%; border:1px dashed #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:19000ms;}
+.round-2 { position: absolute; left: 79px; top: 58px; width: 198px; height: 198px; border-radius: 100%; border:1px dashed rgba(255,255,255,0.5);  -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate1 ; -webkit-animation-duration:8000ms;}
+.round-3 { position: absolute; left: 50px; top: 42px; width: 40px; height: 40px; border:1px solid rgba(255,255,255,.8); text-align: center; line-height: 40px;font-family:'electronicFont'; font-size: 14px;  border-radius: 100%; background: url(../images/bg05rightarea.png) right bottom no-repeat;  -webkit-animation-iteration-count: infinite;  -webkit-animation-name: whitePulse; -webkit-animation-duration:2s;}
+.round-4 { position: absolute; left: 40px; top: 76px; width: 23px; height: 23px; border-radius: 100%; background: url(../images/bg06rightarea.png) right bottom no-repeat; box-shadow: 0 0 12px #fff; -webkit-animation-iteration-count: infinite;  -webkit-animation-name:forotate ; -webkit-animation-duration:4000ms;}
 
 /*.area-inbox-2 { }
 .area-inbox-2 ul {margin-left:50px; margin-top:15px;}

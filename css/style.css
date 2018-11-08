@@ -380,7 +380,7 @@ pre {
 }
 
 .box-center {
-    width: 44%;
+    width: 42%;
     height: 100%;
     /*    background: green;*/
 }
@@ -670,7 +670,7 @@ pre {
 }
 
 .box-right {
-    width: 28%;
+    width: 30%;
     height: 100%;
     background: url(../images/line_img.png) top left repeat-y;
 }
@@ -764,7 +764,7 @@ pre {
 
 .right-center {
     width: 100%;
-    height: 29%;
+    height: 20%;
     position: relative;
 }
 
@@ -816,10 +816,10 @@ pre {
 
 .data-box>.data-number {
     width: 4.9rem;
-    height: 2.3rem;
+    height: 1.5rem;
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 20%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -827,13 +827,13 @@ pre {
     background-size: 100% 100%;
     color: #cdddf7;
     font-size: 0.4rem;
-    line-height: 2.3rem;
+    line-height: 1.5rem;
     text-align: center;
 }
 
 .right-bottom {
     width: 100%;
-    height: 30%;
+    height: 38%;
     position: relative;
 }
 
@@ -884,11 +884,54 @@ pre {
     background-color: transparent !important;
 }
 
-.notek-label-table {
-    height: 100%;
+
+.notek-label-table .cm-status {
+    color: #fff;
+    border: none;
+    line-height: 1;
+    padding: 2px 4px 4px;
+    display: inline-block;
+    transform: scale(.8);
+    border-radius: 3px !important;
+}
+.notek-label-table .cm-status.normal {
+    background-color: #23ea90;
 }
 
+.notek-label-table .cm-status.normal {
+    background-color: #23ea90;
+}
+.notek-label-table .cm-status.loss {
+    background-color: #e44121;
+}
+.notek-label-table .cm-status.logout {
+    background-color: #cc21e4;
+}
+.notek-label-table .cm-status.out {
+    background-color: #dc8712;
+}
 
+.notek-label-table th {
+    padding: 5px;
+    margin: 10px;
+    width: 20%;
+}
+
+.notek-label-table {
+    height: 100%;
+    margin-top: 5px;
+}
+
+#company-tbody {
+    text-align: center;
+}
+
+#companyName{
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    width: 30%
+}
 
 /*.settings-box>p {
     color: #cdddf7;
