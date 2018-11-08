@@ -1845,6 +1845,40 @@ $('#mineusL').on('click', function () {
     }
 })
 
+//高危公司统计 数值变换
+
+$('#assistant-select-ul li').on('click',function() {
+    $('#number1').html(Math.round(Math.random() * 100));
+    $('#number2').html(Math.round(Math.random() * 10 + 10));
+    $('#number3').html(Math.round(Math.random() * 1000));
+    $(this).css({
+        "color": "white",
+        "background": "#126aa7",
+    });
+}) 
+
+var count = 1;
+
+$('#assistant-button').on('click',function() {
+    if(count > 0) {
+        $('#assistant-select').show();
+    }else {
+        $('#assistant-select').hide();
+    }
+    count = 0 - count;
+})
+
+$('#clean-button').on('click',function() {
+    $('#assistant-select-ul li').css({
+        'background-color': 'rgba(14, 148, 234, 0.2)',
+        'color': '#cdddf7'
+    });
+    $('#number1').html('254');
+    $('#number2').html('58');
+    $('#number3').html('6857');
+})
+
+
 
 
 
@@ -1910,28 +1944,7 @@ $(document).ready(function(){
             nsrsbh: '440356562408392'
         }
     ];
-    // var taxConMaps = [
-    //     {
-    //         se: 1987231,
-    //         swjg: '深圳市福田区国家税务局税源管理一科'
-    //     },
-    //     {
-    //         se: 227561,
-    //         swjg: '深圳市福田区国家税务局税源管理二科'
-    //     },
-    //     {
-    //         se: 220198.92,
-    //         swjg: '深圳市福田区国家税务局税源管理三科'
-    //     },
-    //     {
-    //         se: 5645646,
-    //         swjg: '深圳市福田区国家税务局税源管理四科'
-    //     },
-    //     {
-    //         se: 165431,
-    //         swjg: '深圳市福田区国家税务局税源管理五科'
-    //     }
-    // ];
+    
     var typesCon = ``;
 
     var arrayRotateOne = function(arr, reverse){
