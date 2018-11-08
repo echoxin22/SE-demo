@@ -1856,7 +1856,7 @@ $(document).ready(function(){
         {
             status: 'normal',
             statusText: '正常',
-            companyName: '深圳市金谷园技术发展有限公司',
+            companyName: '深圳市金谷技术发展有限公司',
             createDate: '2010-12-12',
             nsrsbh: '440301002418101'
         },
@@ -1894,6 +1894,20 @@ $(document).ready(function(){
             companyName: '中兴通信技术深圳有限公司',
             createDate: '1997-10-28',
             nsrsbh: '4403011924083XY'
+        },
+         {
+            status: 'loss',
+            statusText: '失联',
+            companyName: '深圳市暴雪科技有限公司',
+            createDate: '2008-06-17',
+            nsrsbh: '44038877DK0031Y'
+        },
+        {
+            status: 'logout',
+            statusText: '注销',
+            companyName: '壳牌中国（深圳）有限公司',
+            createDate: '2011-11-11',
+            nsrsbh: '440356562408392'
         }
     ];
     // var taxConMaps = [
@@ -1933,9 +1947,9 @@ $(document).ready(function(){
 
     var executionTypesCon = function() {
         var contentAlias = function() {
-            typesConMaps.slice(0, 5).forEach(function(tc) {
+            typesConMaps.slice(0, 8).forEach(function(tc) {
                 typesCon += `<tr>`;
-                typesCon += `<td><span class="cm-status ${tc.status}">${tc.statusText}</span>${tc.companyName}</td>`;
+                typesCon += `<td id="companyName"><span class="cm-status ${tc.status}">${tc.statusText}</span>${tc.companyName}</td>`;
                 typesCon += `<td>${tc.createDate}</td>`;
                 typesCon += `<td>${tc.nsrsbh}</td>`;
                 typesCon += `</tr>`;
