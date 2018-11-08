@@ -1595,7 +1595,7 @@ function chart4(data, type, chartType) {
         str += '<li><span>' + (i + 1) + '</span><p>' + data[i].name + '</p><p>' + data[i].value + '</p></li>';
     }
 
-    var s_data = [];
+    // var s_data = [];
     var myChart = echarts.init(document.getElementById('chart4'));
     var myCharts = echarts.init(document.getElementById('chart4s'));
     window.addEventListener('resize', function () {
@@ -1626,125 +1626,197 @@ function chart4(data, type, chartType) {
         return tGeoDt;
     }
 
-    function formtVData(geoData, data, srcNam) {
-        var tGeoDt = [];
-        for (var i = 0, len = data.length; i < len; i++) {
-            var tNam = data[i].name
-            if (srcNam != tNam) {
-                tGeoDt.push({
-                    name: tNam,
-                    symbolSize: 2,
-                    itemStyle: {
-                        normal: {
-                            color: '#ffeb40',
-                        }
-                    },
-                    value: geoData[tNam]
+    // function formtVData(geoData, data, srcNam) {
+    //     var tGeoDt = [];
+    //     for (var i = 0, len = data.length; i < len; i++) {
+    //         var tNam = data[i].name
+    //         if (srcNam != tNam) {
+    //             tGeoDt.push({
+    //                 name: tNam,
+    //                 symbolSize: 2,
+    //                 itemStyle: {
+    //                     normal: {
+    //                         color: '#ffeb40',
+    //                     }
+    //                 },
+    //                 value: geoData[tNam]
+    //             });
+    //         }
+
+    //     }
+    //     tGeoDt.push({
+    //         name: srcNam,
+    //         value: geoData[srcNam],
+    //         symbolSize: 5,
+    //         itemStyle: {
+    //             normal: {
+    //                 color: '#2ef358',
+    //             }
+    //         }
+
+    //     });
+    //     return tGeoDt;
+    // }
+
+    // var planePath = 'pin';
+    // if (type == 2) {
+    //     s_data.push({
+    //         type: 'lines',
+    //         zlevel: 2,
+    //         mapType: 'china',
+    //         symbol: 'none',
+    //         effect: {
+    //             show: true,
+    //             period: 1.5,
+    //             trailLength: 0.1,
+    //             //                color: '#ffeb40',
+    //             color: '#2ef358',
+    //             symbol: planePath,
+    //             symbolSize: 6,
+    //             trailLength: 0.5
+
+    //         },
+    //         lineStyle: {
+    //             normal: {
+    //                 color: '#2ef358',
+    //                 width: 1,
+    //                 opacity: 0.4,
+    //                 curveness: 0.2
+    //             }
+    //         },
+    //         data: formtGCData(geoCoordMap, data, '珠海', true)
+    //     })
+
+    // } else if (type == 1) {
+    //     s_data.push({
+    //         type: 'lines',
+    //         zlevel: 2,
+    //         effect: {
+    //             show: true,
+    //             period: 1.5,
+    //             trailLength: 0.1,
+    //             //                color: '#2ef358',
+    //             color: '#ffeb40',
+    //             symbol: planePath,
+    //             symbolSize: 6,
+    //             trailLength: 0.5
+    //         },
+    //         lineStyle: {
+    //             normal: {
+    //                 color: '#ffeb40',
+    //                 width: 1,
+    //                 opacity: 0.4,
+    //                 curveness: 0.2
+    //             }
+    //         },
+    //         data: formtGCData(geoCoordMap, data, '珠海', false)
+    //     }, {
+
+    //         type: 'effectScatter',
+    //         coordinateSystem: 'geo',
+    //         zlevel: 2,
+    //         rippleEffect: {
+    //             period: 4,
+    //             scale: 2.5,
+    //             brushType: 'stroke'
+    //         },
+    //         symbol: 'none',
+    //         symbolSize: 4,
+    //         itemStyle: {
+    //             normal: {
+    //                 color: '#fff'
+    //             }
+    //         },
+
+    //         data: formtVData(geoCoordMap, data, '珠海')
+    //     })
+    // }
+
+    var geoCoordMap = {
+        '宝安区': [113.903895292969, 22.7100932929688],
+        '南山区': [113.937345, 22.566843],
+        '福田区': [114.021429472656, 22.5597585273438],
+        '罗湖区': [114.111109648438, 22.5771169257812],
+        '盐田区': [114.257345, 22.603843],
+        '龙岗区': [114.243746367188, 22.7008522773438],
+        '深圳天然气有限公司': [113.843746367188, 22.7508522773438],
+        '深圳市青鸟科技有限公司': [113.883746367188, 22.6508522773438],
+        '深圳市金谷园技术发展有限公司': [114.223746367188, 22.6608522773438],
+        '深圳市腾讯科技有限公司': [114.283746367188, 22.7508522773438],
+    };
+    var data = [{
+            name: '宝安区',
+            value: 100
+        },
+        {
+            name: '南山区',
+            value: 100
+        },
+        {
+            name: '福田区',
+            value: 100
+        },
+        {
+            name: '罗湖区',
+            value: 100
+        },
+        {
+            name: '盐田区',
+            value: 100
+        },
+        {
+            name: '龙岗区',
+            value: 100
+        },
+        {
+            name: '深圳天然气有限公司',
+            value: 50
+        },
+        {
+            name: '深圳市青鸟科技有限公司',
+            value: 30
+        },
+        {
+            name: '深圳市金谷园技术发展有限公司',
+            value: 70
+        },
+        {
+            name: '深圳市腾讯科技有限公司',
+            value: 80
+        }
+    ];
+    var max = 480,
+        min = 9; // todo 
+    var maxSize4Pin = 100,
+        minSize4Pin = 20;
+    var convertData = function (data) {
+        var res = [];
+        for (var i = 0; i < data.length; i++) {
+            var geoCoord = geoCoordMap[data[i].name];
+            if (geoCoord) {
+                res.push({
+                    name: data[i].name,
+                    value: geoCoord.concat(data[i].value)
                 });
             }
-
         }
-        tGeoDt.push({
-            name: srcNam,
-            value: geoData[srcNam],
-            symbolSize: 5,
-            itemStyle: {
-                normal: {
-                    color: '#2ef358',
-                }
-            }
-
-        });
-        return tGeoDt;
-    }
-
-    var planePath = 'pin';
-    if (type == 2) {
-        s_data.push({
-            type: 'lines',
-            zlevel: 2,
-            mapType: 'china',
-            symbol: 'none',
-            effect: {
-                show: true,
-                period: 1.5,
-                trailLength: 0.1,
-                //                color: '#ffeb40',
-                color: '#2ef358',
-                symbol: planePath,
-                symbolSize: 6,
-                trailLength: 0.5
-
-            },
-            lineStyle: {
-                normal: {
-                    color: '#2ef358',
-                    width: 1,
-                    opacity: 0.4,
-                    curveness: 0.2
-                }
-            },
-            data: formtGCData(geoCoordMap, data, '珠海', true)
-        })
-
-    } else if (type == 1) {
-        s_data.push({
-            type: 'lines',
-            zlevel: 2,
-            effect: {
-                show: true,
-                period: 1.5,
-                trailLength: 0.1,
-                //                color: '#2ef358',
-                color: '#ffeb40',
-                symbol: planePath,
-                symbolSize: 6,
-                trailLength: 0.5
-            },
-            lineStyle: {
-                normal: {
-                    color: '#ffeb40',
-                    width: 1,
-                    opacity: 0.4,
-                    curveness: 0.2
-                }
-            },
-            data: formtGCData(geoCoordMap, data, '珠海', false)
-        }, {
-
-            type: 'effectScatter',
-            coordinateSystem: 'geo',
-            zlevel: 2,
-            rippleEffect: {
-                period: 4,
-                scale: 2.5,
-                brushType: 'stroke'
-            },
-            symbol: 'none',
-            symbolSize: 4,
-            itemStyle: {
-                normal: {
-                    color: '#fff'
-                }
-            },
-
-            data: formtVData(geoCoordMap, data, '珠海')
-        })
-    }
+        return res;
+    };
 
     var option = {
         tooltip: {
             trigger: 'item',
         },
         geo: {
-            map: 'china',
+            map: '深圳',
+            // map: 'china',
             label: {
-                show: true,
-                position: 'insideLeft',
-                color: 'white',
-                fontSize: '10',
+                normal: {
+                            },
                 emphasis: {
-                    show: true
+                    textStyle: {
+                        color: '#fff'
+                    }
                 }
             },
             roam: true,
@@ -1760,7 +1832,116 @@ function chart4(data, type, chartType) {
             left: 10,
             right: 10
         },
-        series: s_data
+        series: [
+            {
+                name: 'light',
+                type: 'map',
+                coordinateSystem: 'geo',
+                data: convertData(data),
+                itemStyle: {
+                    normal: {
+                        color: '#F4E925'
+                    }
+                }
+            },
+            {
+                name: '点',
+                type: 'scatter',
+                coordinateSystem: 'geo',
+                symbol: 'pin',
+                symbolSize: function(val) {
+                    var a = (maxSize4Pin - minSize4Pin) / (max - min);
+                    var b = minSize4Pin - a * min;
+                    b = maxSize4Pin - a * max;
+                    return a * val[2] + b - 5;
+                },
+                label: {
+                    normal: {
+                        // show: true,
+                        // textStyle: {
+                        //     color: '#fff',
+                        //     fontSize: 9,
+                        // }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: function(val) {
+                            var name = val.data.name;
+                            if(name.indexOf('公司') > -1) {
+                                return '#3ae79d';
+                            }
+                            return '#F62157';
+                        }, //标志颜色
+                    }
+                },
+                zlevel: 6,
+                data: convertData(data),
+            },
+            {  
+                name: 'light',
+                type: 'map',
+                mapType: '深圳',
+                geoIndex: 0,
+                aspectScale: 0.75, //长宽比
+                showLegendSymbol: false, // 存在legend时显示
+                label: {
+                    normal: {
+                        show: false
+                    },
+                    emphasis: {
+                        show: false,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                roam: true,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#031525',
+                        borderColor: '#FFFFFF',
+                    },
+                    emphasis: {
+                        areaColor: '#2B91B7'
+                    }
+                },
+                animation: false,
+                data: data
+            },
+            {
+                name: ' ',
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                data: convertData(data.sort(function (a, b) {
+                    return b.value - a.value;
+                }).slice(0, 10)),
+                symbolSize: function (val) {
+                    return val[2] / 10;
+                },
+                showEffectOn: 'render',
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                hoverAnimation: true,
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: true
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#05C3F9',
+                        shadowBlur: 10,
+                        shadowColor: '#05C3F9'
+                    }
+                },
+                zlevel: 1
+            },
+        ]
+        // series: s_data
     };
     if (chartType === '') {
         $('.ranking-box').html(str);
