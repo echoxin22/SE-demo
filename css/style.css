@@ -162,6 +162,11 @@ pre {
     color: #cdddf7;
 }
 
+#assistant-select {
+    float: right;
+    display: none;
+}
+
 .select-div#bigger {
     width:2.5rem;
 }
@@ -171,8 +176,19 @@ pre {
     width: 1.6rem;
     top: 0.5rem;
     left: 0;
-    z-index: 10;
     display: none;
+}
+
+#assistant-select-ul {
+    display: inline-block;
+    font-size: 6px;
+    width: 1.4rem;
+    position: absolute;
+    right: 40px;
+}
+
+#assistant-button {
+    right: 1.6rem;
 }
 
 .select-ul.company {
@@ -180,14 +196,18 @@ pre {
     overflow-y: auto;
 }
 
-.select-ul>li {
+.select-ul>li, #assistant-select-ul>li {
     height: 0.4rem;
     line-height: 0.4rem;
     padding-left: 10px;
     box-sizing: border-box;
     background-color: rgba(14, 148, 234, 0.2);
-    cursor: default;
     color: #cdddf7;
+}
+
+.select-ul>li {
+    cursor: default;
+
 }
 
 .select-ul#bigger-ul>li {
@@ -198,6 +218,13 @@ pre {
 .select-ul>li:hover {
     color: white;
     background: #0e94eb;
+}
+
+#assistant-select-ul>li.active,
+#assistant-select-ul>li:hover {
+    color: white;
+    background: #126aa7;
+    cursor: pointer;
 }
 
 .select-ul>li {
