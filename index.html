@@ -20,7 +20,7 @@
             <div class="left-top">
                 <div class="current-num">
                     <div>当前虚开高风险企业总数</div>
-                    <p>45362</p>
+                    <p data-value="45362">45362</p>
                 </div>
             </div>
             <div class="left-center">
@@ -92,80 +92,43 @@
                     </div>
                 </div>
                 <img src="images/line_bg.png" alt="">
-                <div class="select-box">
-                    <ul id="barType">
-                        <li class="active" data-value="1">派件</li>
-                        <li data-value="2">寄件</li>
-                    </ul>
-                    <div data-type="2">
-                        <div class="select" tabindex="0" hidefocus="true">
-                            <div class="select-div">
-                                公司
-                            </div>
-                            <ul class="select-ul company">
-                                <li class="active" data-value="">公司</li>
-                                <li data-value="1">顺丰</li>
-                                <li data-value="2">京东</li>
-                                <li data-value="2">EMS</li>
-                            </ul>
-                        </div>
-                        <div class="select" tabindex="0" hidefocus="true">
-                            <div class="select-div">
-                                企业类型
-                            </div>
-                            <ul class="select-ul">
-                                <li class="active" data-value="">企业类型</li>
-                                <li data-value="0">个人独资企业</li>
-                                <li data-value="1">合伙企业</li>
-                                <li data-value="1">有限责任公司</li>
-                                <li data-value="1">股份有限公司</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="center-bottom">
-                <div class="chart-box">
+                <div class="chart-box" id="map-box">
                     <div id="chart4" style="width:100%;height:95%;"></div>
                 </div>
                 <div class="city-data">
-                    <div class="city-box">
-                        <p id="titleQ"><span>全网</span>到珠海</p>
-                        <ul class="city-btn" data-city="1">
-                            <li class="active">全网</li>
-                            <li>ABCDE</li>
-                            <li>FGHIJ</li>
-                            <li>KLMNO</li>
-                            <li>PQRST</li>
-                            <li>UVWXYZ</li>
-                        </ul>
-                        <ul class="city-div" id="city">
 
-                        </ul>
+                     <div class="data-box" id="company-data-box">
+                    <div class="settings-box">
+                        <!-- <p><img src="images/teacher_icon.png" alt="">c公司列表<span id="name_a"></span><span id="date_a"></span></p>
+                        <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
+                        <div class="title-box" id="company-title-box">
+                            <h6 id="barTitle">虚开高风险企业</h6>
+                            <img class="line-img" src="images/line-blue.png" alt="">
+                        </div>
+                        <div class="chart-label pull-left types">
+                                           
+                            <table class="table table-bordered tile notek-label-table">
+                                <thead>
+                                    <th>企业名称</th>
+                                    <th>成立时间</th>
+                                    <th>纳税人识别号</th>
+                                </thead>
+
+                                <tbody id="company-tbody">
+                                   <!--  <tr>f
+                                        <td>441</td>
+                                        <td>3306</td>
+                                        <td>http-alt</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <ul class="ranking-box">
-                        <li><span></span>
-                            <p>区域</p>
-                            <p>虚开公司统计</p>
-                        </li>
-                    </ul>
-                    <div class="enlarge-box">
-                        <button class="enlarge-btn" id="fangda"></button>
-                        <ul class="modal-btn">
-                            <li>
-                                <div></div>1</li>
-                            <li>
-                                <div></div>2</li>
-                            <li>
-                                <div></div>3</li>
-                            <li>
-                                <div></div>4</li>
-                            <li>
-                                <div></div>5</li>
-                            <li>
-                                <div></div>6</li>
-                        </ul>
-                    </div>
+                </div>
+                    
                 </div>
             </div>
 
@@ -237,44 +200,34 @@
             </div>
             <div class="right-bottom">
                 <div class="data-box">
-                    <div class="settings-box">
-                        <!-- <p><img src="images/teacher_icon.png" alt="">虚开公司列表<span id="name_a"></span><span id="date_a"></span></p>
+                     <div class="settings-box" id="tax-box">
+                        <!-- <p><img src="images/teacher_icon.png" alt="">c公司列表<span id="name_a"></span><span id="date_a"></span></p>
                         <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
-                        <div class="title-box">
-                            <h6 id="barTitle">虚开高风险企业</h6>
+                        <div class="title-box" id="company-title-box">
+                            <h6 id="barTitle">各地报税情况</h6>
                             <img class="line-img" src="images/line-blue.png" alt="">
                         </div>
-                        <div class="chart-label pull-left types">
-                                           
-                                            <table class="table table-bordered tile notek-label-table">
-                                                <thead>
-                                                    <th>企业名称</th>
-                                                    <th>成立时间</th>
-                                                    <th>纳税人识别号</th>
-                                                </thead>
+                        <div class="chart-label pull-left live">
+                            <table class="table table-bordered tile notek-label-table" style="margin-top: 5%">
+                                <thead>
+                                    <th>税额</th>
+                                    <th>税务局</th>
+                                </thead>
 
-                                                <tbody id="company-tbody">
-                                                   <!--  <tr>
-                                                        <td>441</td>
-                                                        <td>3306</td>
-                                                        <td>http-alt</td>
-                                                    </tr> -->
-                                                </tbody>
-                                            </table>
-                                        </div>
-                    </div>
+                                <tbody>
+                                    <!-- <tr>
+                                        <td>1980</td>
+                                        <td>深圳市福田区国家税务局税源管理一科</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>     
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="pop-up">
-            <span class="close-pop"></span>
-            <h2 class="title">当前到件量</h2>
-            <div class="pop-data-box">
-                <p>123,456,789</p>
-            </div>
-        </div>
 
         <div class="pop-up">
             <span class="close-pop"></span>
@@ -294,26 +247,6 @@
             <div class="filter-con pop-filter" style="display:flex" data-type="3">
                 <div class="select" tabindex="0" hidefocus="true">
                     <div class="select-div">
-                        派件
-                    </div>
-                    <ul class="select-ul">
-                        <li class="active" data-value="1">派件</li>
-                        <li data-value="2">寄件</li>
-                    </ul>
-                </div>
-                <div class="select" tabindex="0" hidefocus="true">
-                    <div class="select-div">
-                        公司
-                    </div>
-                    <ul class="select-ul company">
-                        <li class="active" data-value="">公司</li>
-                        <li data-value="1">顺丰</li>
-                        <li data-value="2">京东</li>
-                        <li data-value="2">EMS</li>
-                    </ul>
-                </div>
-                <div class="select" tabindex="0" hidefocus="true">
-                    <div class="select-div">
                         企业类型
                     </div>
                     <ul class="select-ul">
@@ -331,46 +264,10 @@
         <div class="pop-up">
             <span class="close-pop"></span>
             <div class="filter-con pop-filters" style="display:flex" data-type="4">
-                <div class="select-pop" tabindex="0" hidefocus="true">
-                    <ul id="barTypes">
-                        <li class="active" data-value="1">派件</li>
-                        <li data-value="2">寄件</li>
-                    </ul>
-                </div>
-                <div class="select" tabindex="0" hidefocus="true">
-                    <div class="select-div">
-                        公司
-                    </div>
-                    <ul class="select-ul company">
-                        <li class="active" data-value="">公司</li>
-                        <li data-value="1">顺丰</li>
-                        <li data-value="2">京东</li>
-                        <li data-value="2">EMS</li>
-                    </ul>
-                </div>
-                <div class="select" tabindex="0" hidefocus="true">
-                    <div class="select-div">
-                        企业类型
-                    </div>
-                    <ul class="select-ul">
-                        <li class="active" data-value="">企业类型</li>
-                        <li data-value="0">文件</li>
-                        <li data-value="1">物品</li>
-                    </ul>
-                </div>
             </div>
             <div class="cont-div">
                 <div class="chart-box pop-charts">
                     <div id="chart4s" style="width:100%;height:95%;"></div>
-                </div>
-            </div>
-            <div class="cont-div">
-                <h2 class="title" id="barTitles">派件数据</h2>
-                <button class="btn-class" data-state=1 id="tabBtns"><img src="images/chart_icon.png" alt=""><span>图表</span></button>
-                <div class="chart-box pop-chart">
-                    <div id="chart3s" style="width:100%;height:90%;"></div>
-                </div>
-                <div class="data-box" style="top:25%;width:8.6rem;display:none;">
                 </div>
             </div>
             <div class="cont-div">
@@ -393,30 +290,6 @@
                 </div>
             </div>
             <div class="pop-data">
-                <div class="city-data">
-                    <div class="city-box">
-                        <p id="titleQs"><span>全网</span>到珠海</p>
-                        <ul class="city-btn" data-city="2">
-                            <li class="active">全网</li>
-                            <li>ABCDE</li>
-                            <li>FGHIJ</li>
-                            <li>KLMNO</li>
-                            <li>PQRST</li>
-                            <li>UVWXYZ</li>
-                        </ul>
-                        <ul class="city-div" id="citys">
-
-                        </ul>
-                    </div>
-                    <ul class="ranking-box">
-                        <li><span></span>
-                            <p>城市</p>
-                            <p>虚开公司总计</p>
-                        </li>
-                        <!--                        <li><span>1</span><p>上海</p><p>1sss25(万件)</p></li>-->
-                    </ul>
-
-                </div>
             </div>
         </div>
         <div class="pop-up">
@@ -424,102 +297,10 @@
             <h2 class="title">设置</h2>
             <div class="set-div">
                 <div class="set-box">
-                    <label class="four-f" for="">排班日期</label>
                     <div class="time-div">
                         <input class="time-input" type="text" value="" id="times">
                         <img src="images/selsct_time.png" alt="">
                     </div>
-                </div>
-                <div class="set-box">
-                    <label for="">值班人</label>
-                    <input type="text" value="">
-                    <button class="plus" id="addT"></button>
-                    <button class="mineus" id="mineusT" style="display:none;"></button>
-                </div>
-                <div class="set-box">
-                    <label for="">负责人</label>
-                    <input type="text" value="">
-                    <button class="plus" id="addL"></button>
-                    <button class="mineus" id="mineusL" style="display:none;"></button>
-                    <button class="add-btn" id="addSet"><img src="images/plus.png" alt="">添加</button>
-                </div>
-                <table class="table3">
-                    <thead>
-                        <tr>
-                            <th>值班人</th>
-                            <th>排班日期</th>
-                            <th>负责人</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tList">
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                   <tr>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                       <td>1</td>
-                   </tr>
-                    </tbody>
-                </table>
-                <div class="pages-div" class="mineus">
-                    <button class="prev"></button>
-                    <p id="page"><span>0</span>/<span>0</span></p>
-                    <button class="next"></button>
-                    <input type="number">
-                    <button class="skip">跳转</button>
-                </div>
-            </div>
-            <div class="tishi">日期已存在!</div>
-            <div class="edit-div" style="display:none;">
-                <h4>编辑</h4>
-                <span class="close-edit"></span>
-                <div class="set-box">
-                    <label for="">值班人</label>
-                    <input class="input-edit" id="editT" type="text" value="">
-                </div>
-                <div class="set-box">
-                    <label for="">负责人</label>
-                    <input class="input-edit" id="editL" type="text" value="">
-                </div>
-                <div class="set-box edit-box">
-                    <button id="qxEdit">取消</button>
-                    <button id="qdEdit">确定</button>
                 </div>
             </div>
         </div>

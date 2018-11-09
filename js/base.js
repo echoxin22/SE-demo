@@ -950,439 +950,7 @@ $("#barTypes").on('click', 'li', function () {
 
 
 function chart3(type, chartType) {
-    // var myChart = echarts.init(document.getElementById('chart3'));
-    // var myCharts = echarts.init(document.getElementById('chart3s'));
-    // window.addEventListener('resize', function () {
-    //     myChart.resize();
-    //     myCharts.resize();
-    // });
-
-    // //    设置背景阴影的参数，获取数据的最大值
-
-    // var data; //横坐标数据，不动
-    // var data_; //模拟数据
-    // if (type == 1) {
-    //     data_ = [{
-    //             name: "发票零申报",
-    //             value: 584
-    //         },
-    //         {
-    //             name: "纳税人新设",
-    //             value: 152
-    //         }, {
-    //             name: "发票大量囤积",
-    //             value: 100
-    //         },
-    //         {
-    //             name: "发票限额更改",
-    //             value: 689
-    //         },
-    //         {
-    //             name: "未设立银行账户",
-    //             value: 200
-    //         }]
-    // } else if (type == 2) {
-    //     data_ = [{
-    //             name: "发票零申报",
-    //             value: 568
-    //             }, {
-    //             name: "纳税人新设",
-    //             value: 287
-    //             }, {
-    //             name: "发票大量囤积",
-    //             value: 120
-    //             },
-    //         {
-    //             name: "发票限额更改",
-    //             value: 152
-    //             },
-    //         {
-    //             name: "未设立银行账户",
-    //             value: 125
-    //     }]
-    // }
-    // var series_data; //绘制图表的数据
-    // //绘制图表
-    // var yMax = 0;
-    // for (var j = 0; j < data_.length; j++) {
-    //     if (yMax < data_[j].value) {
-    //         yMax = data_[j].value;
-    //     }
-    // }
-    // var dataShadow = [];
-    // for (var i = 0; i < 10; i++) {
-    //     dataShadow.push(yMax * 2);
-    // }
-
-    // if (type == 1) {
-    //     data = ['发票零申报', "纳税人新设",'发票大量囤积', '发票限额更改', '未设立银行账户'];
-
-    //     if (chartType == '') {
-    //         $(' .dph-data1').html(data_[0].value);
-    //         $(' .dph-data2').html(data_[1].value + data_[3].value);
-    //         $(' .dph-data3').html(data_[3].value);
-    //         $(' .dph-data4').html(data_[2].value);
-    //         $(' .dph-data5').html(data_[1].value);
-    //         $(' .dph-data6').html(data_[4].value);
-    //         $(' .dph-data7').html(data_[4].value);
-    //         $(' .dph-data8').html(data_[4].value);
-    //         $(' .dph-data9').html(data_[4].value);
-    //     } else if (chartType == 0) {
-    //         $('.table1 .dph-data1').html(data_[0].value);
-    //         $('.table1 .dph-data2').html(data_[1].value + data_[3].value);
-    //         $('.table1 .dph-data3').html(data_[3].value);
-    //         $('.table1 .dph-data4').html(data_[2].value);
-    //         $('.table1 .dph-data5').html(data_[1].value);
-    //         $('.table1 .dph-data6').html(data_[4].value + data_[5].value);
-    //         $('.table1 .dph-data7').html(data_[4].value);
-    //         $('.table1 .dph-data8').html(data_[5].value);
-    //         $('.table1 .dph-data9').html(data_[6].value);
-    //     } else if (chartType == 1) {
-    //         $('.table2 .dph-data1').html(data_[0].value);
-    //         $('.table2 .dph-data2').html(data_[1].value + data_[3].value);
-    //         $('.table2 .dph-data3').html(data_[3].value);
-    //         $('.table2 .dph-data4').html(data_[2].value);
-    //         $('.table2 .dph-data5').html(data_[1].value);
-    //         $('.table2 .dph-data6').html(data_[4].value + data_[5].value);
-    //         $('.table2 .dph-data7').html(data_[4].value);
-    //         $('.table2 .dph-data8').html(data_[5].value);
-    //         $('.table2 .dph-data9').html(data_[6].value);
-    //     }
-
-    //     series_data = [
-    //         { // For shadow
-    //             type: 'bar',
-    //             barWidth: 20,
-    //             xAxisIndex: 2,
-    //             tooltip: {
-    //                 show: false
-    //             },
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(14, 148, 235, 0.102)'
-    //                 }
-    //             },
-    //             data: dataShadow,
-    //             animation: false
-    //         },
-    //         {
-    //             name: '发票零申报',
-    //             type: 'bar',
-    //             barGap: '-100%',
-    //             barWidth: '40%',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: '#0e94eb'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [data_[5], 0, 0, 0, 0],
-    //         },
-    //         {
-    //             name: '纳税人新设',
-    //             type: 'bar',
-    //             barGap: '-100%',
-    //             barWidth: '40%',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: '#0e94eb'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [data_[0], 0, 0, 0, 0],
-    //         },
-    //         {
-    //             name: '发票大量囤积',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[2]],
-    //         },
-    //         {
-    //             name: '发票限额更改',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[0]],
-    //         },
-    //         {
-    //             name: '未设立银行账户',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[2]],
-    //         }
-    //     ]
-
-
-    // } else if (type == 2) {
-    //     data = ['发票零申报', "纳税人新设", '发票大量囤积', '发票限额更改', '未设立银行账户'];
-    //     if (chartType == '') {
-    //         $('.mail-data1').html(data_[0].value);
-    //         $('.mail-data2').html(data_[2].value + data_[5].value);
-    //         $('.mail-data3').html(data_[1].value);
-    //         $('.mail-data4').html(data_[2].value);
-    //         $('.mail-data5').html(data_[3].value);
-    //         $('.mail-data6').html(data_[4].value);
-    //         $('.mail-data7').html(data_[5].value);
-    //     } else if (chartType == 0) {
-    //         $('.table1 .mail-data1').html(data_[0].value);
-    //         $('.table1 .mail-data2').html(data_[2].value + data_[5].value);
-    //         $('.table1 .mail-data3').html(data_[1].value);
-    //         $('.table1 .mail-data4').html(data_[2].value);
-    //         $('.table1 .mail-data5').html(data_[3].value);
-    //         $('.table1 .mail-data6').html(data_[4].value);
-    //         $('.table1 .mail-data7').html(data_[5].value);
-    //     } else if (chartType == 1) {
-    //         $('.table2 .mail-data1').html(data_[0].value);
-    //         $('.table2 .mail-data2').html(data_[2].value + data_[5].value);
-    //         $('.table2 .mail-data3').html(data_[1].value);
-    //         $('.table2 .mail-data4').html(data_[2].value);
-    //         $('.table2 .mail-data5').html(data_[3].value);
-    //         $('.table2 .mail-data6').html(data_[4].value);
-    //         $('.table2 .mail-data7').html(data_[5].value);
-    //     }
-
-    //     series_data = [
-    //         { // For shadow
-    //             type: 'bar',
-    //             barWidth: 20,
-    //             xAxisIndex: 2,
-    //             tooltip: {
-    //                 show: false
-    //             },
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(14, 148, 235, 0.102)'
-    //                 }
-    //             },
-    //             data: dataShadow,
-    //             animation: false
-    //         },
-    //         {
-    //             name: '发票零申报',
-    //             type: 'bar',
-    //             barGap: '-100%',
-    //             barWidth: '40%',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: '#0e94eb'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [data_[4], 0, 0, 0, 0],
-    //         },
-    //         {
-    //             name: '纳税人新设',
-    //             type: 'bar',
-    //             barGap: '-100%',
-    //             barWidth: '40%',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: '#0e94eb'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [data_[0], 0, 0, 0, 0],
-    //         },
-    //         {
-    //             name: '发票大量囤积',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[2]],
-    //         },
-    //         {
-    //             name: '发票限额更改',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[2]],
-    //         },
-    //         {
-    //             name: '未设立银行账户',
-    //             type: 'bar',
-    //             xAxisIndex: 1,
-    //             itemStyle: {
-    //                 normal: {
-    //                     color: 'rgba(239,176,19,0.4)'
-    //                 },
-    //                 emphasis: {
-    //                     opacity: 1
-    //                 }
-    //             },
-    //             data: [0, 0, 0, 0, data_[2]],
-    //         }
-    //     ]
-    // }
-
-    // var option = {
-    //     title: '',
-    //     grid: {
-    //         top: '10%',
-    //         containLabel: true
-    //     },
-    //     tooltip: {
-    //         show: true
-    //     },
-    //     xAxis: [{
-    //             type: 'category',
-    //             show: false,
-    //             data: data,
-    //             axisLabel: {
-    //                 textStyle: {
-    //                     color: '#fff'
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             type: 'category',
-    //             position: "bottom",
-    //             data: data,
-    //             boundaryGap: true,
-    //             // offset: 40,
-    //             axisTick: {
-    //                 show: false
-    //             },
-    //             axisLine: {
-    //                 show: false
-    //             },
-    //             axisLabel: {
-    //                 textStyle: {
-    //                     color: '#fff'
-    //                 }
-    //             }
-    //         },
-    //         {
-    //             show: false,
-    //             data: dataShadow,
-    //             axisLabel: {
-    //                 inside: true,
-    //                 textStyle: {
-    //                     color: '#fff'
-    //                 }
-    //             },
-    //             axisTick: {
-    //                 show: false
-    //             },
-    //             axisLine: {
-    //                 show: false
-    //             },
-    //             z: 10
-    //     },
-    //     ],
-    //     yAxis: [{
-    //             show: true,
-    //             splitLine: {
-    //                 show: false,
-    //                 lineStyle: {
-    //                     color: "#0e94eb"
-    //                 }
-    //             },
-    //             axisTick: {
-    //                 show: false
-    //             },
-    //             axisLine: {
-    //                 show: false
-    //             },
-    //             axisLabel: {
-    //                 show: true,
-    //                 color: '#0e94eb'
-    //             }
-    //     }, {
-    //             show: false,
-    //             type: "value",
-    //             nameTextStyle: {
-    //                 color: '#0e94eb'
-    //             },
-    //             axisLabel: {
-    //                 color: '#0e94eb'
-    //             },
-    //             splitLine: {
-    //                 show: false
-    //             },
-    //             axisLine: {
-    //                 show: false
-    //             },
-    //             axisTick: {
-    //                 show: false
-    //             }
-    //     },
-    //         {
-    //             axisLine: {
-    //                 show: false
-    //             },
-    //             axisTick: {
-    //                 show: false
-    //             },
-    //             axisLabel: {
-    //                 textStyle: {
-    //                     color: '#999'
-    //                 }
-    //             }
-    //             }],
-    //     //        color: ['#e54035'],
-    //     series: series_data
-    // }
-    // if (chartType === '') {
-    //     myChart.clear();
-    //     myCharts.clear();
-    //     myChart.setOption(option);
-    //     myCharts.setOption(option);
-    // } else if (chartType === 0) {
-    //     myChart.clear();
-    //     myChart.setOption(option);
-    // } else if (chartType === 1) {
-    //     myCharts.clear();
-    //     myCharts.setOption(option);
-    // }
+    
 }
 
 chart3(1, '')
@@ -1626,111 +1194,6 @@ function chart4(data, type, chartType) {
         return tGeoDt;
     }
 
-    // function formtVData(geoData, data, srcNam) {
-    //     var tGeoDt = [];
-    //     for (var i = 0, len = data.length; i < len; i++) {
-    //         var tNam = data[i].name
-    //         if (srcNam != tNam) {
-    //             tGeoDt.push({
-    //                 name: tNam,
-    //                 symbolSize: 2,
-    //                 itemStyle: {
-    //                     normal: {
-    //                         color: '#ffeb40',
-    //                     }
-    //                 },
-    //                 value: geoData[tNam]
-    //             });
-    //         }
-
-    //     }
-    //     tGeoDt.push({
-    //         name: srcNam,
-    //         value: geoData[srcNam],
-    //         symbolSize: 5,
-    //         itemStyle: {
-    //             normal: {
-    //                 color: '#2ef358',
-    //             }
-    //         }
-
-    //     });
-    //     return tGeoDt;
-    // }
-
-    // var planePath = 'pin';
-    // if (type == 2) {
-    //     s_data.push({
-    //         type: 'lines',
-    //         zlevel: 2,
-    //         mapType: 'china',
-    //         symbol: 'none',
-    //         effect: {
-    //             show: true,
-    //             period: 1.5,
-    //             trailLength: 0.1,
-    //             //                color: '#ffeb40',
-    //             color: '#2ef358',
-    //             symbol: planePath,
-    //             symbolSize: 6,
-    //             trailLength: 0.5
-
-    //         },
-    //         lineStyle: {
-    //             normal: {
-    //                 color: '#2ef358',
-    //                 width: 1,
-    //                 opacity: 0.4,
-    //                 curveness: 0.2
-    //             }
-    //         },
-    //         data: formtGCData(geoCoordMap, data, '珠海', true)
-    //     })
-
-    // } else if (type == 1) {
-    //     s_data.push({
-    //         type: 'lines',
-    //         zlevel: 2,
-    //         effect: {
-    //             show: true,
-    //             period: 1.5,
-    //             trailLength: 0.1,
-    //             //                color: '#2ef358',
-    //             color: '#ffeb40',
-    //             symbol: planePath,
-    //             symbolSize: 6,
-    //             trailLength: 0.5
-    //         },
-    //         lineStyle: {
-    //             normal: {
-    //                 color: '#ffeb40',
-    //                 width: 1,
-    //                 opacity: 0.4,
-    //                 curveness: 0.2
-    //             }
-    //         },
-    //         data: formtGCData(geoCoordMap, data, '珠海', false)
-    //     }, {
-
-    //         type: 'effectScatter',
-    //         coordinateSystem: 'geo',
-    //         zlevel: 2,
-    //         rippleEffect: {
-    //             period: 4,
-    //             scale: 2.5,
-    //             brushType: 'stroke'
-    //         },
-    //         symbol: 'none',
-    //         symbolSize: 4,
-    //         itemStyle: {
-    //             normal: {
-    //                 color: '#fff'
-    //             }
-    //         },
-
-    //         data: formtVData(geoCoordMap, data, '珠海')
-    //     })
-    // }
 
     var geoCoordMap = {
         '宝安区': [113.903895292969, 22.7100932929688],
@@ -2071,7 +1534,7 @@ $(document).ready(function(){
         {
             status: 'normal',
             statusText: '正常',
-            companyName: '深圳市金谷技术发展有限公司',
+            companyName: '深圳市金谷技术发展股份有限公司',
             createDate: '2010-12-12',
             nsrsbh: '440301002418101'
         },
@@ -2125,8 +1588,32 @@ $(document).ready(function(){
             nsrsbh: '440356562408392'
         }
     ];
+
+
+     var taxConMaps = [
+        {
+            se: 1987231,
+            swjg: '深圳市福田区国家税务局税源管理一科'
+        },
+        {
+            se: 227561,
+            swjg: '深圳市福田区国家税务局税源管理二科'
+        },
+        {
+            se: 220198.92,
+            swjg: '深圳市福田区国家税务局税源管理三科'
+        },
+        {
+            se: 5645646,
+            swjg: '深圳市福田区国家税务局税源管理四科'
+        },
+        {
+            se: 165431,
+            swjg: '深圳市福田区国家税务局税源管理五科'
+        }
+    ];
     
-    var typesCon = ``;
+    var typesCon = ``, taxCon = ``;
 
     var arrayRotateOne = function(arr, reverse){
         if(reverse)
@@ -2141,7 +1628,7 @@ $(document).ready(function(){
 
     var executionTypesCon = function() {
         var contentAlias = function() {
-            typesConMaps.slice(0, 8).forEach(function(tc) {
+            typesConMaps.slice(0, 6).forEach(function(tc) {
                 typesCon += `<tr>`;
                 typesCon += `<td id="companyName"><span class="cm-status ${tc.status}">${tc.statusText}</span>${tc.companyName}</td>`;
                 typesCon += `<td>${tc.createDate}</td>`;
@@ -2165,5 +1652,89 @@ $(document).ready(function(){
             }, rand);
         }());
     };
+
+
+     var toThousands = function(num) {
+        if (num == undefined || num == null) {
+            return '0.00';
+        }
+
+        let arr = num.toString().split('.');
+        arr[0] = arr[0].replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
+        // if (!arr[1]) {
+        //     arr[1] = '00';
+        // }
+        return arr.join('.');
+    }
+    var executionTaxCon = function() {
+        var contentAlias = function() {
+            taxConMaps.forEach(function(tc) {
+                taxCon += `<tr>`;
+                taxCon += `<td class="tax-number">${toThousands(Math.round(tc.se))}万元</td>`;
+                taxCon += `<td class="tax-name">${tc.swjg}</td>`;
+                taxCon += `</tr>`;
+            });
+        };
+        contentAlias();
+        $('.chart-label.live >table>tbody').html(taxCon);
+
+        function updateTaxIncome(){
+            var updateIdx = Math.floor(Math.random()*5);
+            taxConMaps[updateIdx].se += Math.random()*20;
+            taxCon = ``;
+            contentAlias();
+            $('.chart-label.live >table>tbody').html(taxCon);
+        };
+        var count = 0;
+        (function loop() {
+            var rand = randomTime(0.2, 1);
+            setTimeout(function() {
+                updateTaxIncome();
+                loop();  
+            }, rand);
+        }());
+    };
+
+    executionTaxCon();
+
     executionTypesCon();
+
+
+    /* --------------------------------------------------------
+     Animate numbers
+    -----------------------------------------------------------*/
+    var animateNumbers = function(flag) {
+        $('.current-num').each(function(index) {
+            var target = $(this).find('p');
+            var start = {someValue: 0};
+            var toAnimate = $(this).find('p').attr('data-value');
+            
+            // Set dynamic numbers.
+            $(this).find('p').attr('data-value', +$(this).find('p').attr('data-value') + 15);
+
+            // Animate the element's value from x to y:
+            $({someValue: flag ? toAnimate - 15 : 0}).animate({someValue: toAnimate}, {
+                duration: 1000,
+                easing:'swing', // can be anything
+                step: function() { // called on every step
+                    // Update the element's text with rounded-up value:
+                    target.text(commaSeparateNumber(Math.round(this.someValue)) + '家');
+                }
+            });
+
+            function commaSeparateNumber(val){
+                while (/(\d+)(\d{3})/.test(val.toString())){
+                    val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                }
+                return val;
+            }
+        });
+    };
+
+    // init numbers.
+    animateNumbers();
+    // timer.
+    setInterval(function() {
+        animateNumbers(true);
+    }, 3000);
 })
