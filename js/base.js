@@ -471,167 +471,167 @@ $('#filBtn').on('click', function () {
     //点击筛选按钮end
 
 
-function chart2(chartType) {
-    var data = [
-        {
-            name: '广州市',
-            value: 1200
-            },
-        {
-            name: '韶关市',
-            value: 154
-            },
-        {
-            name: '深圳市',
-            value: 1316
-            },
-        {
-            name: '珠海市',
-            value: 699
-            },
-        {
-            name: '汕头市',
-            value: 440
-            },
-        {
-            name: '佛山市',
-            value: 406
-            },
-        {
-            name: '江门市',
-            value: 376
-            },
-        {
-            name: '湛江市',
-            value: 451
-            },
-        {
-            name: '茂名市',
-            value: 520
-            },
-        {
-            name: '肇庆市',
-            value: 219
-            },
-        {
-            name: '惠州市',
-            value: 491
-            },
-        {
-            name: '梅州市',
-            value: 588
-            },
-        {
-            name: '汕尾市',
-            value: 417
-            },
-        {
-            name: '河源市',
-            value: 222
-            },
-        {
-            name: '阳江市',
-            value: 218
-            },
-        {
-            name: '清远市',
-            value: 917
-            },
-        {
-            name: '东莞市',
-            value: 336
-            },
-        {
-            name: '中山市',
-            value: 306
-            },
-        {
-            name: '潮州市',
-            value: 810
-            },
-        {
-            name: '揭阳市',
-            value: 54
-            },
-        {
-            name: '云浮市',
-            value: 25
-            }]
+// function chart2(chartType) {
+//     var data = [
+//         {
+//             name: '广州市',
+//             value: 1200
+//             },
+//         {
+//             name: '韶关市',
+//             value: 154
+//             },
+//         {
+//             name: '深圳市',
+//             value: 1316
+//             },
+//         {
+//             name: '珠海市',
+//             value: 699
+//             },
+//         {
+//             name: '汕头市',
+//             value: 440
+//             },
+//         {
+//             name: '佛山市',
+//             value: 406
+//             },
+//         {
+//             name: '江门市',
+//             value: 376
+//             },
+//         {
+//             name: '湛江市',
+//             value: 451
+//             },
+//         {
+//             name: '茂名市',
+//             value: 520
+//             },
+//         {
+//             name: '肇庆市',
+//             value: 219
+//             },
+//         {
+//             name: '惠州市',
+//             value: 491
+//             },
+//         {
+//             name: '梅州市',
+//             value: 588
+//             },
+//         {
+//             name: '汕尾市',
+//             value: 417
+//             },
+//         {
+//             name: '河源市',
+//             value: 222
+//             },
+//         {
+//             name: '阳江市',
+//             value: 218
+//             },
+//         {
+//             name: '清远市',
+//             value: 917
+//             },
+//         {
+//             name: '东莞市',
+//             value: 336
+//             },
+//         {
+//             name: '中山市',
+//             value: 306
+//             },
+//         {
+//             name: '潮州市',
+//             value: 810
+//             },
+//         {
+//             name: '揭阳市',
+//             value: 54
+//             },
+//         {
+//             name: '云浮市',
+//             value: 25
+//             }]
 
-    var myChart = echarts.init(document.getElementById('gdMap'));
-    var myCharts = echarts.init(document.getElementById('gdMaps'));
-    window.addEventListener('resize', function () {
-        myChart.resize();
-        myCharts.resize();
-    });
-    var yMax = 0;
-    for (var j = 0; j < data.length; j++) {
-        if (yMax < data[j].value) {
-            yMax = data[j].value;
-        }
-    }
-        myChart.hideLoading();
-        myCharts.hideLoading();
-        var option = {
-            animation: true,
-            tooltip: {
-                show: true
-            },
-            visualMap: {
-                min: 0,
-                max: yMax,
-                text: ['高', '低'],
-                orient: 'horizontal',
-                itemWidth: 15,
-                itemHeight: 200,
-                right: 0,
-                bottom: 30,
-                inRange: {
-                    color: ['#75ddff', '#0e94eb']
-                },
-                textStyle: {
-                    color: 'white'
-                }
-            },
-            series: [
-                {
-                    name: '数据名称',
-                    type: 'map',
-                    mapType: '广东',
-                    selectedMode: 'multiple',
-                    tooltip: {
-                        trigger: 'item',
-                        formatter: '{b}<br/>{c} '
-                    },
-                    itemStyle: {
-                        normal: {
-                            borderWidth: 1,
-                            borderColor: '#0e94eb',
-                            label: {
-                                show: false
-                            }
-                        },
-                        emphasis: { // 也是选中样式
-                            borderWidth: 1,
-                            borderColor: '#fff',
-                            backgroundColor: 'red',
-                            label: {
-                                show: true,
-                                textStyle: {
-                                    color: '#fff'
-                                }
-                            }
-                        }
-                    },
-                    data: data,
-            }
-            ]
-        };
+//     var myChart = echarts.init(document.getElementById('gdMap'));
+//     var myCharts = echarts.init(document.getElementById('gdMaps'));
+//     window.addEventListener('resize', function () {
+//         myChart.resize();
+//         myCharts.resize();
+//     });
+//     var yMax = 0;
+//     for (var j = 0; j < data.length; j++) {
+//         if (yMax < data[j].value) {
+//             yMax = data[j].value;
+//         }
+//     }
+//         myChart.hideLoading();
+//         myCharts.hideLoading();
+//         var option = {
+//             animation: true,
+//             tooltip: {
+//                 show: true
+//             },
+//             visualMap: {
+//                 min: 0,
+//                 max: yMax,
+//                 text: ['高', '低'],
+//                 orient: 'horizontal',
+//                 itemWidth: 15,
+//                 itemHeight: 200,
+//                 right: 0,
+//                 bottom: 30,
+//                 inRange: {
+//                     color: ['#75ddff', '#0e94eb']
+//                 },
+//                 textStyle: {
+//                     color: 'white'
+//                 }
+//             },
+//             series: [
+//                 {
+//                     name: '数据名称',
+//                     type: 'map',
+//                     mapType: '广东',
+//                     selectedMode: 'multiple',
+//                     tooltip: {
+//                         trigger: 'item',
+//                         formatter: '{b}<br/>{c} '
+//                     },
+//                     itemStyle: {
+//                         normal: {
+//                             borderWidth: 1,
+//                             borderColor: '#0e94eb',
+//                             label: {
+//                                 show: false
+//                             }
+//                         },
+//                         emphasis: { // 也是选中样式
+//                             borderWidth: 1,
+//                             borderColor: '#fff',
+//                             backgroundColor: 'red',
+//                             label: {
+//                                 show: true,
+//                                 textStyle: {
+//                                     color: '#fff'
+//                                 }
+//                             }
+//                         }
+//                     },
+//                     data: data,
+//             }
+//             ]
+//         };
 
-        myChart.setOption(option);
-        myCharts.setOption(option);
-}
-chart2('');
+//         myChart.setOption(option);
+//         myCharts.setOption(option);
+// }
+// chart2('');
 
 //------------广东省寄派件数据内容end---------------
 
@@ -853,100 +853,100 @@ function addCityBtn(data) {
     $('#citys').html(li_con);
 }
 
-$('.city-btn').on('click', 'li', function () {
-    var str;
-    var patt = [/[a-z]/i, /[a-e]/i, /[f-i]/i, /[k-o]/i, /[p-t]/i, /[u-z]/i];
-    var index = $(this).index();
-    var li_con = '';
-    for (var i = 0; i < cityName.length; i++) {
-        str = cityName[i].firstP;
-        if (patt[index].test(str)) {
-            li_con += '<li>' + cityName[i].name + '</li>'
-        }
-    }
+// $('.city-btn').on('click', 'li', function () {
+//     var str;
+//     var patt = [/[a-z]/i, /[a-e]/i, /[f-i]/i, /[k-o]/i, /[p-t]/i, /[u-z]/i];
+//     var index = $(this).index();
+//     var li_con = '';
+//     for (var i = 0; i < cityName.length; i++) {
+//         str = cityName[i].firstP;
+//         if (patt[index].test(str)) {
+//             li_con += '<li>' + cityName[i].name + '</li>'
+//         }
+//     }
 
-    $(this).addClass('active').siblings('li').removeClass('active');
-    if (index == 0) {
-        $('#city').children().removeClass('active');
-        if ($(this).parent().data('city') == 1) {
-            $('.ranking-box').show();
-            if ($("#barType").find('.active').data('value') == 1) {
-                $('#titleQ').html('<span>全网</span>到珠海');
-            } else if ($("#barType").find('.active').data('value') == 2) {
-                $('#titleQ').html('珠海到<span>全网</span>')
-            }
-            $('#city').html(li_con);
-        } else if ($(this).parent().data('city') == 2) {
-            if ($('.cont-div').eq(0).css('visibility') != 'hidden') {
-                $('.ranking-box').show();
-            }
-            if ($("#barTypes").find('.active').data('value') == 1) {
-                $('#titleQs').html('<span>全网</span>到珠海');
-            } else if ($("#barTypes").find('.active').data('value') == 2) {
-                $('#titleQs').html('珠海到<span>全网</span>')
-            }
-            $('#citys').html(li_con);
-        }
-    } else {
-        if ($(this).parent().data('city') == 1) {
-            $('#city').html(li_con);
-        } else if ($(this).parent().data('city') == 2) {
-            $('#citys').html(li_con);
-        }
-    }
-
-
-})
+//     $(this).addClass('active').siblings('li').removeClass('active');
+//     if (index == 0) {
+//         $('#city').children().removeClass('active');
+//         if ($(this).parent().data('city') == 1) {
+//             $('.ranking-box').show();
+//             if ($("#barType").find('.active').data('value') == 1) {
+//                 $('#titleQ').html('<span>全网</span>到珠海');
+//             } else if ($("#barType").find('.active').data('value') == 2) {
+//                 $('#titleQ').html('珠海到<span>全网</span>')
+//             }
+//             $('#city').html(li_con);
+//         } else if ($(this).parent().data('city') == 2) {
+//             if ($('.cont-div').eq(0).css('visibility') != 'hidden') {
+//                 $('.ranking-box').show();
+//             }
+//             if ($("#barTypes").find('.active').data('value') == 1) {
+//                 $('#titleQs').html('<span>全网</span>到珠海');
+//             } else if ($("#barTypes").find('.active').data('value') == 2) {
+//                 $('#titleQs').html('珠海到<span>全网</span>')
+//             }
+//             $('#citys').html(li_con);
+//         }
+//     } else {
+//         if ($(this).parent().data('city') == 1) {
+//             $('#city').html(li_con);
+//         } else if ($(this).parent().data('city') == 2) {
+//             $('#citys').html(li_con);
+//         }
+//     }
 
 
-$('#city').on('click', 'li', function () {
-    $(this).addClass('active').siblings('li').removeClass('active');
-    $('.center-bottom .ranking-box').hide();
-    if ($("#barType").find('.active').data('value') == 1) {
-        $('#titleQ').html('<span>' + $(this).html() + '</span>到珠海');
-    } else if ($("#barType").find('.active').data('value') == 2) {
-        $('#titleQ').html('珠海到<span>' + $(this).html() + '</span>')
-    }
-})
+// })
 
-$('#citys').on('click', 'li', function () {
-    $(this).addClass('active').siblings('li').removeClass('active');
-    $('.pop-data .ranking-box').hide();
-    if ($("#barTypes").find('.active').data('value') == 1) {
-        $('#titleQs').html('<span>' + $(this).html() + '</span>到珠海');
-    } else if ($("#barTypes").find('.active').data('value') == 2) {
-        $('#titleQs').html('珠海到<span>' + $(this).html() + '</span>')
-    }
-})
 
-//寄派件选择
-$("#barType").on('click', 'li', function () {
-    $(this).addClass('active').siblings('li').removeClass('active');
-    $('#barTitle').html($(this).html() + '数据');
-    $('#tabBtn').data('state', $(this).data('value'));
-    if ($(this).data('value') == 1) {
-        $('.table1').eq(0).show().siblings('table').hide();
-    } else if ($(this).data('value') == 2) {
-        $('.table1').eq(1).show().siblings('table').hide();
-    }
-    chart3($(this).data('value'), 0);
-    chart4(chart4Data, $(this).data('value'), 0);
-})
+// $('#city').on('click', 'li', function () {
+//     $(this).addClass('active').siblings('li').removeClass('active');
+//     $('.center-bottom .ranking-box').hide();
+//     if ($("#barType").find('.active').data('value') == 1) {
+//         $('#titleQ').html('<span>' + $(this).html() + '</span>到珠海');
+//     } else if ($("#barType").find('.active').data('value') == 2) {
+//         $('#titleQ').html('珠海到<span>' + $(this).html() + '</span>')
+//     }
+// })
+
+// $('#citys').on('click', 'li', function () {
+//     $(this).addClass('active').siblings('li').removeClass('active');
+//     $('.pop-data .ranking-box').hide();
+//     if ($("#barTypes").find('.active').data('value') == 1) {
+//         $('#titleQs').html('<span>' + $(this).html() + '</span>到珠海');
+//     } else if ($("#barTypes").find('.active').data('value') == 2) {
+//         $('#titleQs').html('珠海到<span>' + $(this).html() + '</span>')
+//     }
+// })
 
 //寄派件选择
-$("#barTypes").on('click', 'li', function () {
-    $(this).addClass('active').siblings('li').removeClass('active');
-    $('#barTitles').html($(this).html() + '数据');
-    $('#tabBtns').data('state', $(this).data('value'));
-    if ($(this).data('value') == 1) {
-        $('.table2').eq(0).show().siblings('table').hide();
-    } else if ($(this).data('value') == 2) {
-        $('.table2').eq(1).show().siblings('table').hide();
-    }
-    chart3($(this).data('value'), 1);
-    chart4(chart4Data, $(this).data('value'), 1);
+// $("#barType").on('click', 'li', function () {
+//     $(this).addClass('active').siblings('li').removeClass('active');
+//     $('#barTitle').html($(this).html() + '数据');
+//     $('#tabBtn').data('state', $(this).data('value'));
+//     if ($(this).data('value') == 1) {
+//         $('.table1').eq(0).show().siblings('table').hide();
+//     } else if ($(this).data('value') == 2) {
+//         $('.table1').eq(1).show().siblings('table').hide();
+//     }
+//     chart3($(this).data('value'), 0);
+//     chart4(chart4Data, $(this).data('value'), 0);
+// })
 
-})
+//寄派件选择
+// $("#barTypes").on('click', 'li', function () {
+//     $(this).addClass('active').siblings('li').removeClass('active');
+//     $('#barTitles').html($(this).html() + '数据');
+//     $('#tabBtns').data('state', $(this).data('value'));
+//     if ($(this).data('value') == 1) {
+//         $('.table2').eq(0).show().siblings('table').hide();
+//     } else if ($(this).data('value') == 2) {
+//         $('.table2').eq(1).show().siblings('table').hide();
+//     }
+//     chart3($(this).data('value'), 1);
+//     chart4(chart4Data, $(this).data('value'), 1);
+
+// })
 
 
 function chart3(type, chartType) {
@@ -1614,6 +1614,8 @@ $(document).ready(function(){
     ];
     
     var typesCon = ``, taxCon = ``;
+
+    
 
     var arrayRotateOne = function(arr, reverse){
         if(reverse)

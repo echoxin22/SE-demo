@@ -891,14 +891,18 @@ pre {
 
 /*企业滚动表格*/
 
-.data-box#company-data-box {
+.data-box#company-data-box, .data-box#company-data-box2{
     width:100%;
 }
 
-#company-title-box {
+#company-title-box{
     width:100%;
 }
 
+#company-data-box2 td {
+    padding: 2%;
+    padding-right: 5%;
+}
 
 #tax-box {
     top: 0;
@@ -972,7 +976,7 @@ pre {
     margin-top: 5px;
 }
 
-#company-tbody {
+#company-tbody, #company-tbody2 {
     text-align: center;
 }
 

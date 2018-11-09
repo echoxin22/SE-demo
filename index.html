@@ -37,11 +37,17 @@
                 </div>
             </div>
             <div class="left-bottom" class="select">
-                <div class="title-box">
+                <!-- <div class="title-box">
                     <h6>广东省虚开公司统计</h6>
                     <img class="line-img" src="images/line-blue.png" alt="">
                     <button id="filBtn"><img src="images/select_icon.png" alt="">筛选</button>
-                </div>
+                </div> -->
+
+                <div class="title-box" id="company-title-box2">
+                                <h6 id="barTitle">纳税额/进销差 过小</h6>
+                    <button id="filBtn"><img src="images/select_icon.png" alt="">筛选</button>
+                                <img class="line-img" src="images/line-blue.png" alt="">
+                            </div>
                 <div class="chart-box">
                     <div class="filter-con" id="filCon" data-type="1">
                         <div class="select" tabindex="0" hidefocus="true">
@@ -68,7 +74,54 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="gdMap" class="gd-map"></div>
+                    <div class="data-box" id="company-data-box2" style="">
+                        <div class="settings-box" style="top:0; left:0">
+                            <!-- <p><img src="images/teacher_icon.png" alt="">c公司列表<span id="name_a"></span><span id="date_a"></span></p>
+                            <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
+                            
+                            <div class="chart-label pull-left">
+                                               
+                                <table class="table table-bordered tile notek-label-table" style="text-align: left">
+                                    <thead>
+                                        <th>企业名称</th>
+<!--                                         <th>成立时间</th>
+ -->                                        <th style="text-align: center">纳税额/进销差</th>
+                                    </thead>
+
+                                    <tbody id="company-tbody2" style="text-align: left">
+                                       <tr>
+                                            <td>深圳市金谷技术发展股份有限公司</td>
+                                            <td style="text-align: center">0.251</td>
+                                        </tr>
+                                        <tr>
+                                            <td>深圳市腾讯科技有限公司</td>
+                                            <td style="text-align: center">0.346</td>
+                                        </tr>
+                                        <tr>
+                                            <td>深圳天然气有限公司</td>
+                                            <td style="text-align: center">1.672</td>
+                                        </tr>
+                                        <tr>
+                                            <td>中国石化（深圳）有限公司</td>
+                                            <td style="text-align: center">3.276</td>
+                                        </tr>
+                                        <tr>
+                                            <td>中兴通信技术深圳有限公司</td>
+                                            <td style="text-align: center">2.546</td>
+                                        </tr>
+                                        <tr>
+                                            <td>深圳市暴雪科技有限公司</td>
+                                            <td style="text-align: center">1.231</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="gdMap" class="gd-map">
+                        
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -100,34 +153,34 @@
                 </div>
                 <div class="city-data">
 
-                     <div class="data-box" id="company-data-box">
-                    <div class="settings-box">
-                        <!-- <p><img src="images/teacher_icon.png" alt="">c公司列表<span id="name_a"></span><span id="date_a"></span></p>
-                        <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
-                        <div class="title-box" id="company-title-box">
-                            <h6 id="barTitle">虚开高风险企业</h6>
-                            <img class="line-img" src="images/line-blue.png" alt="">
-                        </div>
-                        <div class="chart-label pull-left types">
-                                           
-                            <table class="table table-bordered tile notek-label-table">
-                                <thead>
-                                    <th>企业名称</th>
-                                    <th>成立时间</th>
-                                    <th>纳税人识别号</th>
-                                </thead>
+                    <div class="data-box" id="company-data-box">
+                        <div class="settings-box">
+                            <!-- <p><img src="images/teacher_icon.png" alt="">c公司列表<span id="name_a"></span><span id="date_a"></span></p>
+                            <p><img src="images/people_iocn.png" alt="">负责人：<span id="lea_a"></span></p> -->
+                            <div class="title-box" id="company-title-box">
+                                <h6 id="barTitle">虚开高风险企业</h6>
+                                <img class="line-img" src="images/line-blue.png" alt="">
+                            </div>
+                            <div class="chart-label pull-left types">
+                                               
+                                <table class="table table-bordered tile notek-label-table">
+                                    <thead>
+                                        <th>企业名称</th>
+                                        <th>成立时间</th>
+                                        <th>纳税人识别号</th>
+                                    </thead>
 
-                                <tbody id="company-tbody">
-                                   <!--  <tr>f
-                                        <td>441</td>
-                                        <td>3306</td>
-                                        <td>http-alt</td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
+                                    <tbody id="company-tbody">
+                                       <!--  <tr>f
+                                            <td>441</td>
+                                            <td>3306</td>
+                                            <td>http-alt</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
                     
                 </div>
             </div>
